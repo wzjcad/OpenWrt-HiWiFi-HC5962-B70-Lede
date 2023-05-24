@@ -137,9 +137,9 @@ jobs:
       if: (!cancelled())
       run:
         df -hT
-        cp openwrt/diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
-        cp openwrt/diy-part2.sh openwrt/bin/targets/ramips/mt7621/diy-part2.txt
-        cp openwrt/.config openwrt/bin/targets/ramips/mt7621/config.txt
+        mv openwrt/diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
+        mv openwrt/diy-part2.sh openwrt/bin/targets/ramips/mt7621/diy-part2.txt
+        mv openwrt/.config openwrt/bin/targets/ramips/mt7621/config.txt
 
     - name: 上传Bin目录
       uses: actions/upload-artifact@main
