@@ -140,6 +140,7 @@ jobs:
         mv .config openwrt/bin/targets/ramips/mt7621/config.txt
         mv diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
         mv diy-part2.sh openwrt/bin/targets/ramips/mt7621/diy-part2.txt
+        
     - name: 上传Bin目录
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
