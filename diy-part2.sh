@@ -11,7 +11,7 @@
 #
 
 # 修改默认IP
-sed -i 's/192.168.3.199/192.168.5.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.5.1/192.168.3.199/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.3.199/10.0.0.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
 #禁用IPv6 DHCP，包含单引号的sed外部直接用双引号
