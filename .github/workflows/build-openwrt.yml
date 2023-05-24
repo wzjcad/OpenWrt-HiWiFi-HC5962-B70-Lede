@@ -136,6 +136,7 @@ jobs:
     - name: 检查空间使用情况
       if: (!cancelled())
       run: df -hT
+        cp /openwrt/.config /openwrt/bin/targets/ramips/mt7621/config.txt
 
     - name: 上传Bin目录
       uses: actions/upload-artifact@main
