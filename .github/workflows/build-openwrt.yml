@@ -135,8 +135,11 @@ jobs:
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
     - name: 检查空间使用情况
       if: (!cancelled())
-      run:
-        df -hT && mv openwrt/.config openwrt/bin/targets/ramips/mt7621/config.txt && mv openwrt/diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
+      run: |
+        df -hT
+        mv .config openwrt/bin/targets/ramips/mt7621/config.txt
+        mv diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
+        mv diy-part2.sh openwrt/bin/targets/ramips/mt7621/diy-part2.txt
     - name: 上传Bin目录
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
