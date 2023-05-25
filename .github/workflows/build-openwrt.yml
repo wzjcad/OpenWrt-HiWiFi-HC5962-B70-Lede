@@ -137,7 +137,7 @@ jobs:
       if: (!cancelled())
       run: |
         df -hT
-        mv .config openwrt/bin/targets/ramips/mt7621/config.txt
+        [ -e $CONFIG_FILE ] && cp $CONFIG_FILE openwrt/bin/targets/ramips/mt7621/config.txt
         mv diy-part1.sh openwrt/bin/targets/ramips/mt7621/diy-part1.txt
         mv diy-part2.sh openwrt/bin/targets/ramips/mt7621/diy-part2.txt
         
