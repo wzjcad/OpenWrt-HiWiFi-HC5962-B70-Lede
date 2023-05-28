@@ -29,4 +29,4 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package
 
 
 #更换内核 5.4  5.10 5.15
-sed -i "s/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g" target/linux/ramips/Makefile
+sed -i "s/KERNEL_PATCHVER:=5.40/KERNEL_PATCHVER:=5.10/g" target/linux/ramips/Makefile
